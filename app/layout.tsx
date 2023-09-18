@@ -21,7 +21,10 @@ export default async function RootLayout({
   console.log(theme);
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <h1>{theme ? theme : null}</h1>
+        {children}
+      </body>
     </html>
   );
 }
