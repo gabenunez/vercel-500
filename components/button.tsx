@@ -1,9 +1,11 @@
 "use client";
 
-function setCookie() {
-  window.document.cookie = "theme=darkOfCourse; path=/";
-}
+import { setCookie } from "cookies-next";
 
 export default function Button() {
-  return <button onClick={() => setCookie()}>Set cookie</button>;
+  return (
+    <button onClick={() => setCookie("theme", "dark mode of course")}>
+      Set cookie
+    </button>
+  );
 }
