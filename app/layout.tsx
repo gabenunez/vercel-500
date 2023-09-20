@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
+import Heading from "@/components/heading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +17,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const cookieStore = cookies();
-  const theme = cookieStore.get("theme")?.value;
+  const theme = cookieStore.get("theme")?.value || "light";
 
-  console.log(theme);
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h1>{theme ? theme : null}</h1>
+        <Heading title={theme} />
         {children}
       </body>
     </html>
