@@ -20,7 +20,10 @@ export default async function RootLayout({
   const theme = cookieStore.get("theme")?.value || "light";
 
   return (
-    <html lang="en">
+    <html lang="en" data-theme={theme} style={{ colorScheme: theme }}>
+      <head>
+        <meta name="theme" content={cookieStore.get("theme")?.value} />
+      </head>
       <body className={inter.className}>
         <Heading title={theme} />
         {children}
