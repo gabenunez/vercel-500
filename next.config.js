@@ -21,6 +21,10 @@ module.exports = {
         source: "/stocks",
         destination: "https://stocks-vs-trends.vercel.app/",
       },
+      {
+        source: "stocks/assets/:filePath",
+        destination: "https://stocks-vs-trends.vercel.app/assets/:filePath",
+      },
     ];
   },
 };
