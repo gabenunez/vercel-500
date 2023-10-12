@@ -19,11 +19,11 @@ module.exports = {
     return [
       {
         source: "/stocks",
-        destination: "https://stocks-vs-trends.vercel.app/",
+        destination: "https://stocks-vs-trends.vercel.app",
       },
       {
-        source: "/stocks/assets/:filePath",
-        destination: "https://stocks-vs-trends.vercel.app/assets/:filePath",
+        source: "/stocks/:filePath*",
+        destination: "https://stocks-vs-trends.vercel.app/:filePath*",
       },
     ];
   },
