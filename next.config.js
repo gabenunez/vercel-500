@@ -15,4 +15,12 @@ module.exports = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/stocks",
+        destination: "https://stocks-vs-trends.vercel.app/",
+      },
+    ];
+  },
 };
