@@ -27,4 +27,5 @@ module.exports = {
       },
     ];
   },
+  assetPrefix: "https://stocks-vs-trends.vercel.app/",
 };
